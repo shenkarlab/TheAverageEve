@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> The Average Eve </title>
+	<meta name="author" content="Ben Ari Kutai & Noam Rom" />
+	<meta name="description" content="" />
+	<meta name="keywords"  content="" />
+	<!-- Style includes -->
+	<link rel="stylesheet" type="text/css" href="styles/style2.css" />
+	<link rel="stylesheet" type="text/css" href="styles/animate.css" />
+	<link rel="stylesheet" type="text/css" href="styles/jquery.bxslider.css" />
+	<link rel="stylesheet" type="text/css" href="styles/jquery.fullPage.css" />
+
+	<!-- Scripts includes -->
+	<!-- <script type="text/javascript" src="includes/jquery.slimscroll.min.js"></script> -->
+	<script src="includes/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="includes/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="includes/d3.js"></script>
+	<script type="text/javascript" src="includes/scripts2.js"></script>
+	<script type="text/javascript" src="includes/jquery.bxslider.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF'],
+				navigation: true,
+				navigationPosition: 'left',
+				navigationTooltips: ['First page', 'Second page', 'Third and last page'],
+				responsive: 900,
+				menu: '#menu',
+				loopTop: true,
+				loopBottom: true,
+				verticalCentered: false
+			});
+
+		});
+	</script>
+
+	<!--[if IE]>
+	<script type="text/javascript">
+		var console = { log: function() {} };
+	</script>
+	<![endif]-->
+
+</head>
+<body>
+<div>
+	<!--
+	<ul style="position: fixed; z-index: 99999;" id="menu">
+		<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+	</ul>
+	-->
+</div>
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			<div class="dynamic-element-cover"> </div>
+			<div class="left-side-buttons black-text">
+				<div id="popNames" class="button clickable">  </div>
+				<div id="whyColors" class="button clickable">  </div>
+			</div>
+			<div class="right-side-buttons white-text">
+				<div id="tradition" class="button clickable">  </div>
+			</div>
+			<div class="clear"></div>
+			<div class="white woman">
+				<div class="content">
+
+					<div class="cloud" id="black-cloud-1"> </div> <div class="cloud" id="black-cloud-2"> </div> <div class="cloud" id="black-cloud-3"> </div>
+					<div class="disappear">
+						<div class="hospital black-hospital">
+
+						</div>
+					</div>
+					<div id="hospital-tree">  </div>
+					<div class="parents" id="black-ppl"></div>
+				</div>
+			</div>
+			<div class="black man">
+				<div class="content">
+					<div class="cloud" id="white-cloud-1"> </div> <div class="cloud" id="white-cloud-2"> </div>
+
+					<div class="head-title" dir="rtl">
+						<h1> שתזכו לבנים זכרים  </h1>
+						<span> מלחמת המינים מתחילה כבר ברחם. החל מבחירת השם </span>
+						<span> כלה בבחירת צבעי הבגד הראשון ועד לבחירת הרב </span>
+					</div>
+					<div class="disappear">
+						<div class="hospital white-hospital">
+
+						</div>
+					</div>
+					<div id="hospital-lbt">  </div>
+					<div class="parents" id="white-ppl" ></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div class="intro">
+			<div class="dynamic-element-cover"> </div>
+			<div class="white woman">
+				<div class="content">
+					<div id="leftStairs"> </div>
+					<div class="disappear">
+
+						<div class="kGarden" id="kGardenLeft">
+
+						</div>
+					</div>
+
+				</div>
+				<div id="toysWhite"> </div>
+			</div>
+			<div class="black man">
+				<div class="content">
+					<div class="head-title" dir="rtl">
+						<h1> נשים מגדלות את העולם  </h1>
+						<span> כבר בגיל הגן משתרשות אצל הילד תפיסות מגדריות </span>
+						<span> כשהוא לומד מה מתאים לבן ומה לבת. מחקרים מסכימים </span>
+						<span> פה אחד שאלו הבניות חברתיות ולא הכרח ביולוגי. אך </span>
+						<span> בעולם בו הנשים הן המחנכות העיקריות, עולה השאלה </span>
+						<span> למה אין הבניה חינוכית שיוויונית יותר. </span>
+					</div>
+
+					<div class="disappear">
+						<div class="kGarden" id="kGardenRight">
+
+						</div>
+					</div>
+					<div class="clickable" id="rightStairs"> </div>
+				</div>
+				<div id="toysBlack"> </div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<div class="white woman">
+				<div class="content">
+					<h1> Woman Black2 </h1>
+					<h2>This is heading 2</h2>
+					<h3>This is heading 3</h3>
+					<h4>This is heading 4</h4>
+					<h5>This is heading 5</h5>
+					<h6>This is heading 6</h6>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</p>
+				</div>
+			</div>
+			<div class="black man">
+				<div class="content">
+					<h1> Man Black2 </h1>
+					<h2>This is heading 2</h2>
+					<h3>This is heading 3</h3>
+					<h4>This is heading 4</h4>
+					<h5>This is heading 5</h5>
+					<h6>This is heading 6</h6>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

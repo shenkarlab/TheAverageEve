@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="includes/d3.js"></script>
+    <script src="includes/jquery-1.11.2.min.js"></script>
+
+</head>
+<body>
+    <script>
+        var boyNames = [];
+        var boySum = 0;
+        var girlSum = 0;
+        var girlNames = [];
+        var svgW = 300;
+        var svgH = 300;
+        var xPos = 0;
+        var yPos = 50;
+        var rectWidth = 10;
+        $( window ).load(function() {
+            $.getJSON("./json/pop_name.json", function(json) {
+                console.log(json);
+                boyNames = json.popularName.boys.names;
+                girlNames = json.popularName.girls.names;
+                boySum = json.popularName.boys.sum;
+                girlSum = json.popularName.girls.sum;
+                console.log('boyNames',boyNames,'girlNames',girlNames);
+                var svg = d3.select("body").append("svg").attr("width",svgW).attr("height",svgH);
+                svg.selectAll("rect").data(json.popularName.boys.percent)
+                        .enter().append("rect")
+                        .attr("x",function(d){xPos += 30; return xPos;})
+                        .attr("y",yPos).attr("width",rectWidth)
+                        .attr("height",function(d) {return (Math.sqrt((d*boySum)))/15;});
+                svg.selectAll("p").data(json.popularName.boys.percent)
+                        .enter().append("p")
+                        .html(function(d){return d;});
+            });
+        });
+
+
+
+    </script>
+</body>
+</html>
+
