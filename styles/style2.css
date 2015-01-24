@@ -1,13 +1,13 @@
 /* Reset CSS */
 @font-face {
-	font-family: MeodedR;
-	src: url('../fonts/MeodedR.otf');
+	font-family: AlefR;
+	src: url('../fonts/AlefR.ttf');
 	font-weight: bold;
 }
 
 @font-face {
-	font-family: MeodedB;
-	src: url('../fonts/MeodedB.otf');
+	font-family: AlefB;
+	src: url('../fonts/AlefB.ttf');
 	font-weight: bold;
 }
 
@@ -150,7 +150,7 @@ q:before,q:after {
 }
 
 .white-text, .black-text{
-	font-family: 'MeodedR', cursive;
+	font-family: 'AlefR', cursive;
 }
 .white-text{
 	color:white;
@@ -228,12 +228,12 @@ q:before,q:after {
 
 .black p, .black h1, .black h2, .black h3, .black h4, .black h5, .black h6, .black span, .dynamic-element-cover{
 	color:white;
-	font-family: 'MeodedR', cursive;
+	font-family: 'AlefB', cursive;
 }
 
 .white p, .white h1, .white h2, .white h3, .white h4, .white h5, .white h6, .white span, .dynamic-element-cover{
 	color:black;
-	font-family: 'MeodedR', cursive;
+	font-family: 'AlefR', cursive;
 }
 
 .content{
@@ -489,7 +489,7 @@ q:before,q:after {
 .yearAndContent > span{
 	display: block;
 	font-size:25px;
-	font-family: 'MeodedB', cursive;
+	font-family: 'AlefB', cursive;
 	margin: 0 auto;
 	width: 100px;
 }
