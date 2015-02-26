@@ -172,11 +172,13 @@
     width: auto;
     opacity: 1;
     font-family: 'PauzaLight', cursive;
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 900;
 }
 #fp-nav ul li .fp-tooltip.right {
     right: 20px;
 }
 #fp-nav ul li .fp-tooltip.left {
     left: 20px;
+    top: -8px;
 }

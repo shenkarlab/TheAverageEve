@@ -8,24 +8,34 @@
 	<meta name="description" content="" />
 	<meta name="keywords"  content="" />
 	<!-- Style includes -->
-	<link rel="stylesheet" type="text/css" href="styles/style.css" />
+	<link rel="stylesheet" type="text/css" href="styles/style2.css" />
+	<link rel="stylesheet" type="text/css" href="styles/animate.css" />
+	<link rel="stylesheet" type="text/css" href="styles/jquery.bxslider.css" />
+	<link rel="stylesheet" type="text/css" href="styles/jquery.fullPage.css" />
 
 	<!-- Scripts includes -->
 	<!-- <script type="text/javascript" src="includes/jquery.slimscroll.min.js"></script> -->
-	<script src="includes/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="includes/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="includes/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="includes/d3.js"></script>
-	<script type="text/javascript" src="includes/scripts.js"></script>
+	<script type="text/javascript" src="includes/scripts2.js"></script>
+	<script type="text/javascript" src="includes/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="includes/d3.min.js"></script>
+    <script type="text/javascript" src="includes/d3pie.min.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				anchors: ['firstPage', 'secondPage', '3rdPage','4thPage','5thPage','6thPage','7thPage'],
 				sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF'],
 				navigation: true,
-				navigationPosition: 'right',
-				navigationTooltips: ['First page', 'Second page', 'Third and last page'],
-				responsive: 900
+				navigationPosition: 'left',
+				navigationTooltips: ['נשים וגברים','שתזכו לבנים זכרים', 'נשים מגדלות את העולם', 'מה מונע מהן להתקדם','זה לא ריאלי','לא חייבות להרים פגז'],
+				responsive: 900,
+				menu: '#menu',
+				loopTop: true,
+				loopBottom: true,
+				verticalCentered: false
 			});
 
 		});
@@ -39,102 +49,260 @@
 
 </head>
 <body>
+<div>
+	<!--
+	<ul style="position: fixed; z-index: 99999;" id="menu">
+		<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+	</ul>
+	-->
+</div>
+<div id="fullpage">
+    <div class="section" id="section0">
+        <div class="intro">
+            <div class="dynamic-element-cover"> </div>
+            <div class="white woman">
+                <div class="content">
+                    <embed class="float-right" style="height:90%;" src="svg/opening/girl.svg" type="image/svg+xml" />
+                </div>
 
-<div id="wrapper">
-	<div class="section " id="section0">
-		<div class="intro">
-			<div class="opacity-background"> </div>
-			<div class="white woman">
-				<div class="content">
-					<div class="hospital black-hospital">
-						<div class="cloud" id="black-cloud-1"> </div> <div class="cloud" id="black-cloud-2"> </div>
+            </div>
+            <div class="black man">
+                <div class="content">
+                    <embed class="float-left" style="height:90%;" src="svg/opening/boy.svg" type="image/svg+xml" />
+                </div>
 
-						<div id="ambulance" class="clickable"> <div id="amb-siren-light"> </div> <div id="nurse-in-amb"></div> <div id="amb-siren"> </div> <div class="amb-wheels" id="amb-wheel1"> </div> <div class="amb-wheels" id="amb-wheel2"> </div> </div>
-						<div class="parents clickable" id="black-ppl"></div>
-					</div>
-				</div>
-			</div>
-			<div class="black man">
-				<div class="content">
-					<div class="hospital white-hospital">
-						<div class="black head-title">
-							<h1> שתזכו לבנים זכרים  </h1>
-							<span> מלחמת המינים מתחילה כבר ברחם. החל מבחירת השם </span>
-							<span> כלה בבחירת צבעי הבגד הראשון ועד לבחירת הרב </span>
-						</div>
-						<div class="cloud" id="white-cloud-1"> </div> <div class="cloud" id="white-cloud-2"> </div>
-						<div id="rabbi"> </div>
-						<div class="parents clickable" id="white-ppl" ></div>
-					</div>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-	</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
 	<div class="section" id="section1">
 		<div class="intro">
-			<div class="opacity-background"> </div>
+			<div class="dynamic-element-cover"> </div>
+			<div class="left-side-buttons black-text ">
+				<div id="popNames" class="button clickable animated"> </div>
+				<div id="whyColors" class="button clickable animated">  </div>
+			</div>
+			<div class="right-side-buttons white-text">
+				<div id="tradition" class="button clickable animated">  </div>
+			</div>
+			<div class="clear"></div>
 			<div class="white woman">
 				<div class="content">
-					<h1> Woman Black2 </h1>
-					<h2>This is heading 2</h2>
-					<h3>This is heading 3</h3>
-					<h4>This is heading 4</h4>
-					<h5>This is heading 5</h5>
-					<h6>This is heading 6</h6>
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-					</p>
+                    <embed style="height:5%;" class="cloud" id="black-cloud-2" src="svg/hospital/c_2.svg" type="image/svg+xml" />
+                    <embed style="height:5%;" class="cloud" id="black-cloud-1" src="svg/hospital/c_4.svg" type="image/svg+xml" />
+                    <embed style="height:5%;" class="cloud" id="black-cloud-3" src="svg/hospital/c_5.svg" type="image/svg+xml" />
+					<!-- <div class="cloud" id="black-cloud-1"> </div> <div class="cloud" id="black-cloud-2"> </div> <div class="cloud" id="black-cloud-3"> </div>-->
+					<div class="disappear disappearHospital">
+                        <embed class="black-hospital"  src="svg/hospital/white_hodspital-01.svg" type="image/svg+xml" />
+					</div>
+                    <embed style="width: 40%;" id="hospital-tree"  src="svg/hospital/car.svg" type="image/svg+xml" />
+                    <embed style="width: 35%;" id="black-ppl" class="parents" src="svg/hospital/black_couple.svg" type="image/svg+xml" />
 				</div>
+
 			</div>
 			<div class="black man">
 				<div class="content">
-					<h1> Man Black2 </h1>
-					<h2>This is heading 2</h2>
-					<h3>This is heading 3</h3>
-					<h4>This is heading 4</h4>
-					<h5>This is heading 5</h5>
-					<h6>This is heading 6</h6>
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-					</p>
+                    <embed style="height:5%;" class="cloud" id="white-cloud-2" src="svg/hospital/c_3.svg" type="image/svg+xml" />
+                    <embed style="height:5%;" class="cloud" id="white-cloud-1" src="svg/hospital/c_1.svg" type="image/svg+xml" />
+
+					<div class="head-title" dir="rtl">
+						<h1> שתזכו לבנים זכרים  </h1>
+						<span> מלחמת המינים מתחילה כבר ברחם. החל מבחירת השם </span>
+                        <span> כלה בבחירת צבעי הבגד הראשון ועד לברכת הרב </span>
+                        <span> והטקסיות המלווה את קבלת הרך הנולד </span>
+                        <span> לחצו על כפתורי הכותרות כדי להתחיל לחוות את מסלול החיים</span>
+                        <span> הממוצע ופערי המגדר שבו.</span>
+					</div>
+					<div class="disappear disappearHospital">
+                        <embed class="white-hospital"  src="svg/hospital/black_hodspital-01.svg" type="image/svg+xml" />
+
+					</div>
+                    <embed style="width: 40%;" id="hospital-lbt"  src="svg/hospital/lamp.svg" type="image/svg+xml" />
+                    <embed style="width: 35%;" id="white-ppl" class="parents" src="svg/hospital/black_white.svg" type="image/svg+xml" />
 				</div>
+
 			</div>
 			<div class="clear"></div>
 		</div>
 	</div>
 	<div class="section" id="section2">
-		<div class="intro">
-			<div class="opacity-background"> </div>
-			<div class="white woman">
-				<div class="content">
-					<h1> Woman Black2 </h1>
-					<h2>This is heading 2</h2>
-					<h3>This is heading 3</h3>
-					<h4>This is heading 4</h4>
-					<h5>This is heading 5</h5>
-					<h6>This is heading 6</h6>
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-					</p>
-				</div>
-			</div>
-			<div class="black man">
-				<div class="content">
-					<h1> Man Black2 </h1>
-					<h2>This is heading 2</h2>
-					<h3>This is heading 3</h3>
-					<h4>This is heading 4</h4>
-					<h5>This is heading 5</h5>
-					<h6>This is heading 6</h6>
-					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-					</p>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
+        <div class="intro">
+            <div class="dynamic-element-cover"> </div>
+            <div class="left-side-buttons black-text">
+                <div id="powerToChange" class="button clickable animated">  </div>
+                <div id="womenRaise" class="button clickable animated">  </div>
+            </div>
+            <div class="right-side-buttons white-text">
+                <div id="gamesButton" class="button clickable animated">  </div>
+            </div>
+            <div class="clear"></div>
+            <div class="white woman">
+                <div class="content">
+                    <div class="disappear">
+                        <embed class="kGarden float-right" id="kGardenLeft" src="svg/garden/girl.svg" type="image/svg+xml" />
+                    </div>
+                    <embed id="leftStairs" class="float-right" src="svg/garden/girl_bg_2.svg" type="image/svg+xml" />
+                    <embed id="toysWhite" style="width:45%;bottom: 5%;left:0%;" src="svg/garden/girl_bg_1.svg" type="image/svg+xml" />
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="black man">
+                <div class="content">
+                    <div class="head-title" dir="rtl">
+                        <h1> נשים מגדלות את העולם  </h1>
+                        <span> הילדים שלנו יפגשו בגן שלהם בעיקר גננות. ובכל זאת, למרות </span>
+                        <span> שנשים מגדלות את הדורות הבאים, כל הנתונים מצביעים על </span>
+                        <span> כך שכבר בגיל הגן הילדים לומדים מה מתאים לבנים ומה </span>
+                        <span> מתאים לבנות. המשיכו ללחוץ על כפתורי הכותרות כדי להבין </span>
+                        <span> למה. </span>
+                    </div>
+
+                    <div class="disappear">
+                        <embed class="kGarden float-left" id="kGardenRight" src="svg/garden/boy.svg" type="image/svg+xml" />
+                    </div>
+                    <embed id="rightStairs" class="float-left" src="svg/garden/boy_bg_2.svg" type="image/svg+xml" />
+                    <embed id="toysBlack" style="width:45%;bottom: 5%;right: 0%;" src="svg/garden/boy_bg_1.svg" type="image/svg+xml" />
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
 	</div>
+    <div class="section" id="section3">
+        <div class="intro">
+            <div class="dynamic-element-cover"> </div>
+            <div class="left-side-buttons black-text">
+                <!--<div id="growUp" class="button clickable animated">  </div>-->
+                <div id="howMuchInClass" class="button clickable animated">  </div>
+                <div id="whosBetter" class="button clickable animated">  </div>
+            </div>
+            <div class="right-side-buttons white-text">
+                <div id="bothersYou" class="button clickable animated">  </div>
+                <div id="classWithNoBoys" class="button clickable animated">  </div>
+            </div>
+            <div class="clear"></div>
+            <div class="white woman">
+                <div class="content">
+
+                    <div class="disappear">
+                        <embed class="float-right" style="width: 80%;" src="svg/school/girl.svg" type="image/svg+xml" />
+                    </div>
+                    <embed id="schoolClock" style="width:10%;top:5%;right:30%;" src="svg/school/girl_bg_3.svg" type="image/svg+xml" />
+                    <embed id="schoolTeacher" style="width:40%;top:15%;right:40%;" src="svg/school/girl_bg_1.svg" type="image/svg+xml" />
+                    <embed style="width:35%;position: absolute;bottom: 5%;left:0%;" src="svg/school/girl_bg_2.svg" type="image/svg+xml" />
+
+                </div>
+
+            </div>
+            <div class="black man">
+                <div class="content">
+                  <div class="head-title" dir="rtl">
+                        <h1> מה מונע מהן להתקדם? </h1>
+                        <span> הן אוהבות יותר את בתי הספר, מתבגרות הרבה יותר </span>
+                        <span> מהר, עד כיתה ה' מקבלות ציונים גבוהים יותר ומניחים </span>
+                        <span> שללא נוכחות הבנים אף היו מגיעות להשיגים גבוהים </span>
+                        <span> יותר. אז מה מונע מהן להמשיך באותה מגמה כמו </span>
+                        <span> הבנים? ומה גורם להן לחשוש מהמקצועות הריאלים? </span>
+                  </div>
+                      <div class="disappear">
+                        <embed class="float-left" style="width: 80%;" src="svg/school/boy.svg" type="image/svg+xml" />
+                      </div>
+                      <embed style="width:40%;position: absolute;right: 20%;top: 15%;" src="svg/school/boy_bg_1.svg" type="image/svg+xml" />div>
+                      <embed style="width:35%;position: absolute;bottom: 5%;right:0%;" src="svg/school/boy_bg_2.svg" type="image/svg+xml" />div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section" id="section4">
+        <div class="intro">
+            <div class="dynamic-element-cover"> </div>
+            <div class="left-side-buttons black-text">
+                <div id="profSchools" class="button clickable animated">  </div>
+                <div id="realStudy" class="button clickable animated">  </div>
+            </div>
+            <div class="right-side-buttons white-text">
+                <div id="teachCrew" class="button clickable animated">  </div>
+            </div>
+            <div class="clear"></div>
+            <div class="white woman">
+                <div class="content">
+
+                    <div class="disappear">
+                        <embed class="float-right" style="width: 100%;" src="svg/high%20school/girl_locker.svg" type="image/svg+xml" />
+                    </div>
+
+                    <embed class="float-right" style="width:40%;position: absolute;bottom:40%;right:50%;" src="svg/high%20school/girl_bg_1.svg" type="image/svg+xml" />
+                    <embed class="float-right" style="width:35%;position: absolute;bottom:5%;left:0%;" src="svg/high%20school/girl_bg_2.svg" type="image/svg+xml" />
+                </div>
+
+            </div>
+            <div class="black man">
+                <div class="content">
+                    <div class="head-title" dir="rtl">
+                        <h1> זה לא ריאלי</h1>
+                        <span> בנות אמנם בוחרות פחות במגמות הריאליות, אך אלו </span>
+                        <span> שכן, מגיעות להצטיינות יתרה משלם הבנים. נתונים </span>
+                        <span> אלו ממשיכים להעלות תהיות באשר לבחירת המגמות </span>
+                        <span> בתיכון, מגמות שמכוונות בהרבה מקרים לעיסוק </span>
+                        <span> עתידי. ייתן ומדובר במחסום פסיכולי גרידא? </span>
+                    </div>
+                    <div class="disappear">
+                        <embed class="float-left" style="width: 100%;" src="svg/high%20school/boy_locker.svg" type="image/svg+xml" />
+                    </div>
+                    <embed class="float-right" style="width:40%;position: absolute;bottom:40%;left:50%;" src="svg/high%20school/boy_bg_1.svg" type="image/svg+xml" />
+                    <embed class="float-right" style="width:35%;position: absolute;bottom:5%;right:0%;" src="svg/high%20school/boy_bg_2.svg" type="image/svg+xml" />
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section" id="section5">
+        <div class="intro">
+            <div class="dynamic-element-cover"> </div>
+            <div class="left-side-buttons black-text">
+                <div id="commandersButton" class="button clickable animated">  </div>
+                <div id="recruitingStatsButton" class="button clickable animated">  </div>
+            </div>
+            <div class="right-side-buttons white-text">
+                <div id="suicideArmyButton" class="button clickable animated">  </div>
+            </div>
+            <div class="clear"></div>
+            <div class="white woman">
+                <div class="content">
+                    <div class="disappear">
+                        <embed class="float-right" style="width: 100%;" src="svg/army/girl.svg" type="image/svg+xml" />
+                    </div>
+                    <embed class="float-right" style="width:40%;position: absolute;top:40%;left:10%;" src="svg/army/girl_bg_1.svg" type="image/svg+xml" />
+                    <embed class="float-right" style="width:40%;position: absolute;bottom:10%;left:0%;" src="svg/army/girl_bg_2.svg" type="image/svg+xml" />
+                </div>
+
+            </div>
+            <div class="black man">
+                <div class="content">
+                    <div class="head-title" dir="rtl">
+                        <h1> לא חייבות להרים פגז </h1>
+                        <span> ראש ארגון ביון מעברי אמר לאחרונה כי "לבנות יכולות </span>
+                        <span>גבוהות יותר מאשר לגברים. הדי.אנ.איי שלהן יותר</span>
+                        <span>משובח מאשר של גברים ויש להן את היכולת לעבוד</span>
+                        <span>ב'מולטי-טסקינג' מדהים. הן לא חייבות להרים פגז</span>
+                        <span>ששוקל עשרות ק"ג כדי להפגין כישורים. הן מצטיינת</span>
+                        <span>בתהליך קבלת החלטות". אז איך הן עדיין לא משתוות</span>
+                        <span>לגברים בצה"\ל?</span>
+                    </div>
+                    <div class="disappear">
+                        <embed class="float-left" style="width: 100%;" src="svg/army/boy.svg" type="image/svg+xml" />
+                    </div>
+                    <embed class="float-right" style="width:40%;position: absolute;top:40%;right:10%;" src="svg/army/boy_bg_1.svg" type="image/svg+xml" />
+                    <embed class="float-right" style="width:40%;position: absolute;bottom:10%;right:0%;" src="svg/army/boy_bg_2.svg" type="image/svg+xml" />
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
 </div>
 
 </body>

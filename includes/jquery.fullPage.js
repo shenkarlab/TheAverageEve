@@ -1890,7 +1890,7 @@ var minusToplocation = "-5%";
 		$(document).ready(function(){
 			$(document).find('.woman').css('height', getTableHeight($(this)) + 'px');
 			$(document).find('.man').css('height', getTableHeight($(this)) + 'px');
-			$(document).find('.opacity-background').css('height', getTableHeight($(this)) + 'px');
+
 		});
 	};
 })(jQuery);
