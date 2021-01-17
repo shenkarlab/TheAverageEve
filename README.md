@@ -1,4 +1,4 @@
 TheAverageEve
 =============
 
-Data visualization course.
+Data visualization course. 
